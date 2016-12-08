@@ -6,9 +6,9 @@ class Solution(object):
         """
         result = [[] for i in range(numRows)]
         for row in range(numRows):
-            part = [1 for i in range(row)]
+            part = [1 for i in range(row+1)]
             for i in range(row+1):
-                if i == 0 or i == row - 1:
+                if i == 0 or i == row:
                     continue
                 else:
                     part[i] = result[row - 1][i - 1] + result[row - 1][i]
